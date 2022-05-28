@@ -2,6 +2,10 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const port = process.env.PORT || 3000;
+
+require("dotenv").config();
+
 app.use(express.urlencoded());
 
 app.set("view engine", "ejs");
@@ -27,5 +31,5 @@ app.post("/subscription", (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("Servidor rodado em http://localhost:3000/")}
+  console.log(`Servidor rodado em http://localhost:${port}`)}
   );
