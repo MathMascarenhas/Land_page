@@ -30,6 +30,6 @@ app.post("/subscription", (req, res) => {
    res.redirect("/");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Servidor rodado em http://localhost:${port}`)}
   );
